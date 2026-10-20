@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Pink Store</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <header>
+
+        <div class="logo">
+            The Pink Store
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button id="temaBtn" class="tema-toggle" type="button"
+            aria-label="Cambiar a tema oscuro" aria-pressed="false">
+            <span class="tema-toggle__icono" aria-hidden="true">🌙</span>
+            <span class="tema-toggle__texto">Tema Oscuro</span>
+            <span class="tema-toggle__pista" aria-hidden="true">
+                <span class="tema-toggle__circulo"></span>
+            </span>
+        </button>
+        
+    </header>
+
+
+    <!-- =========================
+         SECCIÓN PRINCIPAL
+    ========================== -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-slideshow" aria-hidden="true">
+    <span class="hero-slide hero-slide--1"></span>
+    <span class="hero-slide hero-slide--2"></span>
+    <span class="hero-slide hero-slide--3"></span>
+    <span class="hero-slide hero-slide--4"></span>
+        </div>
+        
+        <div class="hero-text">
+
+            <h1>The Pink Store</h1>
+
+            <p>
+                La moda a tu estilo
+            </p>
+
+            <button onclick="mostrarMensaje()">
+                Conocer más
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+    <section id="nosotros" class="section">
+
+        <h2>Sobre Nosotros</h2>
+
+        <p class="texto-centro">
+            Somos una empresa de moda que pienda en comodidad, estilo y economìa.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+    <section id="servicios" class="section fondo">
+
+        <h2>Servicios</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>HOMBRE</h3>
+                <p>
+LO MEJOR PARA ÈL              </p>
+
+                <button onclick="mostrarServicio('Trailers')">
+                    Ver más
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h3>MUJER</h3>
+                <p>
+LO MEJOR PARA ELLA                </p>
+
+                <button onclick="mostrarServicio('Reseñas')">
+                    Ver más
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h3>ACCESORIOS</h3>
+                <p>
+ENCUENTRA LO MEJORA PARA COMPLEMENTAR TUS OUTFITS                </p>
+
+                <button onclick="mostrarServicio('Directores')">
+                    Ver más
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERÍA
+    ========================== -->
+    <section id="galeria" class="section">
+
+        <h2>Galería</h2>
+
+        <div class="galeria">
+            <img src="imagenes/foto1.jpg" alt="foto1 de cine">
+            <img src="imagenes/foto2.jpg" alt="foto2 de cine">
+            <img src="imagenes/foto3.jpg" alt="foto3 de cine">
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+    <section id="contacto" class="section">
+
+        <div class="formulario-seccion">
+
+            <h2>Formulario de Contacto</h2>
+
+            <form id="formularioContacto" novalidate>
+
+                <!-- NOMBRE -->
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"
+                           minlength="3" maxlength="30" required
+                           placeholder="Escribe tu nombre">
+                    <small class="mensaje-error" id="errorNombre"></small>
+                </div>
+
+                <!-- APELLIDO -->
+                <div class="campo">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido"
+                           minlength="3" maxlength="30" required
+                           placeholder="Escribe tu apellido">
+                    <small class="mensaje-error" id="errorApellido"></small>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email"
+                           maxlength="100" required
+                           placeholder="ejemplo@correo.com">
+                    <small class="mensaje-error" id="errorEmail"></small>
+                </div>
+
+                <!-- TELEFONO -->
+                <div class="campo">
+                    <label for="telefono">Número de teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono"
+                           minlength="7" maxlength="10" required
+                           placeholder="3001234567">
+                    <small class="mensaje-error" id="errorTelefono"></small>
+                </div>
+
+                <!-- ASUNTO -->
+                <div class="campo">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto"
+                           minlength="5" maxlength="80" required
+                           placeholder="Escribe el asunto">
+                    <small class="mensaje-error" id="errorAsunto"></small>
+                </div>
+
+                <!-- MENSAJE -->
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje"
+                              minlength="10" maxlength="500" required
+                              placeholder="Escribe tu mensaje"></textarea>
+                    <small class="mensaje-error" id="errorMensaje"></small>
+                </div>
+
+                <button type="submit">Enviar formulario</button>
+                <p id="mensajeExito" aria-live="polite"></p>
+
+            </form>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer>
+
+        <p>
+            © 2026 NotiPelis - All Rights Reserved
+        </p>
+
+        <p>
+            Página creada con HTML, CSS y JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- Conexión con JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
