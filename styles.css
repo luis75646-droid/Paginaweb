@@ -72,66 +72,14 @@ nav a:hover {
     text-align: center;
     padding: 40px;
     overflow: hidden;
-    background: #111;
-    color: rgb(255, 255, 225);
-}
-
-.hero-slideshow {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-}
-
-.hero-slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
+    
+    /* Imagen de fondo ocupando todo el cuadro con una capa oscura translúcida */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('imagenes/pink.jpeg');
     background-size: cover;
     background-position: center;
-    animation: cambioHero 20s infinite;
-}
-
-.hero-slide--1 {
-    background-image: url('imagenes/teatro.jpg');
-}
-
-.hero-slide--2 {
-    background-image: url('imagenes/fondo1.jpg');
-    animation-delay: 5s;
-}
-
-.hero-slide--3 {
-    background-image: url('imagenes/fondo2.jpg');
-    animation-delay: 10s;
-}
-
-.hero-slide--4 {
-    background-image: url('imagenes/fondo3.jpg');
-    animation-delay: 15s;
-}
-
-.hero-slide::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-}
-
-@keyframes cambioHero {
-    0%,
-    5% {
-        opacity: 0;
-    }
-
-    10%,
-    25% {
-        opacity: 1;
-    }
-
-    30%,
-    100% {
-        opacity: 0;
-    }
+    background-repeat: no-repeat;
+    
+    color: rgb(255, 255, 225);
 }
 
 .hero-text {
@@ -148,24 +96,6 @@ nav a:hover {
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
-}
-.hero {
-    position: relative;
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    overflow: hidden;
-    
-    /* Imagen de fondo ocupando todo el cuadro con una capa oscura translúcida */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('pink.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    color: rgb(255, 255, 225);
 }
 /* =========================
    SECCIONES
