@@ -150,14 +150,13 @@ nav a:hover {
     margin-bottom: 30px;
 }
 .imagen-destacada {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #ff4081;
-  margin-bottom: 15px;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 3px solid #ff4081 !important;
+    margin-bottom: 15px !important;
 }
-
 /* =========================
    SECCIONES
 ========================= */
