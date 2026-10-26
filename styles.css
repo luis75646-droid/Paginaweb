@@ -149,13 +149,23 @@ nav a:hover {
     font-size: 20px;
     margin-bottom: 30px;
 }
-.imagen-destacada {
-    width: 150px !important;
-    height: 150px !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
-    border: 3px solid #ff4081 !important;
-    margin-bottom: 15px !important;
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    overflow: hidden;
+    
+    /* Imagen de fondo ocupando todo el cuadro con una capa oscura translúcida */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('pink.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: rgb(255, 255, 225);
 }
 /* =========================
    SECCIONES
